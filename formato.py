@@ -733,7 +733,7 @@ for eli, idx_lines in sorted(dic_ei.items(), key=lambda t: t[0]): #Sort of the d
         else:
             wl_from_el = vac2air((1/(my_e[nj-1] - my_e[ni-1])*1e8))
         #Secondary quantum number
-        print(my_cfg[ni-1], my_cfg[nj-1])
+        #print(my_cfg[ni-1], my_cfg[nj-1])
         sqn_i = ['s', 'p', 'd', 'f', 'g', 'h', 'i', 'k', 'l', 'm'][get_sqn(my_cfg[ni-1])]
         sqn_j = ['s', 'p', 'd', 'f', 'g', 'h', 'i', 'k', 'l', 'm'][get_sqn(my_cfg[nj-1])]
         #print(wl[k], wl_from_el, my_cfg[ni-1], sqn_i, my_cfg[nj-1], sqn_j)
