@@ -192,7 +192,10 @@ for k, record1 in enumerate(content[2::4]): #Each atomic line is made for 4 reco
         if idata[1].strip() in ['-', '', 'unknown']:
 
             if idata[0].strip() == '': #Case where only configuration is given and is in idata[2] (like in ThII)
-                if idata[2].strip()[-1] == '*':
+                if (idata[2].strip()[-2:] == 'o*') or (idata[2].strip()[-1] == 'e'):
+                    print(f'READ INPUT {k+1:5d}: LINE SKIPPED: CONFIG + TERM FORMAT ISSUE: {record3}') 
+                    continue  
+                elif idata[2].strip()[-1] == '*':
                     cfgi.append(idata[2].strip()[:-1])
                     termi.append('*')
                 else:
@@ -218,9 +221,16 @@ for k, record1 in enumerate(content[2::4]): #Each atomic line is made for 4 reco
         #print(idata)
         #input()
         if idata[1].strip() in ['-', '', 'unknown']:
+            #print(idata)
+            #input()
 
             if idata[0].strip() == '': #Case where only configuration is given and is in idata[2] (like in ThII)
-                if idata[2].strip()[-1] == '*':
+                if (idata[2].strip()[-2:] == 'o*') or (idata[2].strip()[-1] == 'e'): #Case where configuration and spectral term are not well setup (as in CoI)
+                    print(f'READ INPUT {k+1:5d}: LINE SKIPPED: CONFIG + TERM FORMAT ISSUE: {record3}')
+                    cfgi.pop()
+                    termi.pop()  
+                    continue                  
+                elif idata[2].strip()[-1] == '*':
                     cfgj.append(idata[2].strip()[:-1])
                     termj.append('*')
                 else:
