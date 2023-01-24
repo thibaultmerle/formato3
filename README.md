@@ -87,15 +87,32 @@ msa <<EOF
 
 ## Control plots of the model atoms
 
-`plotato.py atom1`
+```
+plotato.py atom1
+```
 
 can produce Grotrian diagrams for energy levels `atom.XXY_elY.png`, radiative transitions `atom.XXY_rtY.png` and photoionization `atom.XXY_pxY.png`. 
 
-In addition, a histogram of the log*gf* can also be obtained `atom.Co2`. 
+In addition, a histogram of the log*gf* can also be obtained `atom.XXY_gf.png`. 
 
 Example:
 
-`plotato.py atom.Co1`
+```
+plotato.py atom.Co1
+```
+
+Grotrian diagram with photoionisations of Co I:
+
+![Alt text](atoms/Co/1/atom.Co1_px1.png)
+
+Grotrian diagram with all the radiative transitions of Co I:
+
+![Alt text](atoms/Co/1/atom.Co1_rt1.png)
+
+Histogram of the oscillator strenghts of Co I:
+
+![Alt text](atoms/Co/1/atom.Co1_gf.png)
+
 
 ---
 
