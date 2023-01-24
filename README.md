@@ -1,5 +1,6 @@
 # formato3
-Build model atoms in the MULTI input format.
+
+Tool to build model atoms in the MULTI input format, required in non-LTE calculations of chemical abundances.
 
 
 There are 3 main scripts: **formato.py**, **mergato.py** and **plotato.py**, and an additional fortran code to make superatom in **msa/v5/make_superatom_v5.f** (from B. Plez).
@@ -29,6 +30,8 @@ formato.py ad/vald/Co/II/ThibaultMerle.047578 atom.Co2
 
 /!\ The number of lines (**NLIN** parameter) may be updated at the beginning of the model atom /!\
 
+---
+
 ## Build model atom by combining two ionization stages
 
 ```
@@ -38,6 +41,8 @@ mergato.py atom1 atom2
 Example: 
 
 mergato.py atom.Co1 atom.Co2
+
+---
 
 ## Make a super-atom by combining levels and lines
 
@@ -78,6 +83,7 @@ msa <<EOF
 > 6000
 > EOF
 ```
+---
 
 ## Control plots of the model atoms
 
@@ -91,3 +97,8 @@ Example:
 
 `plotato.py atom.Co1`
 
+---
+
+Please cite this webpage and this reference [Merle et al. (2011)](#https://ui.adsabs.harvard.edu/abs/2011MNRAS.418..863M/abstract) if you find this tool useful.
+
+Bugs can be reported to tmerle@ulb.ac.be .
