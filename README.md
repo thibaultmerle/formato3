@@ -116,6 +116,6 @@ Histogram of the oscillator strenghts of Co I:
 
 ---
 
-Please cite this webpage and this reference [Merle et al. (2011)](#https://ui.adsabs.harvard.edu/abs/2011MNRAS.418..863M/abstract) if you find this tool useful.
+Please cite this webpage and [Merle et al. (2011)](#https://ui.adsabs.harvard.edu/abs/2011MNRAS.418..863M/abstract) if you find this tool useful.
 
 Bugs can be reported to tmerle@ulb.ac.be .
