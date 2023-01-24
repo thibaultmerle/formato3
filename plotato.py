@@ -17,7 +17,7 @@ write_title = False
 reverse_baw = True
 ext = 'png'
 
-#Spectroscopic line of interest used if activate_loi = True
+#Spectroscopic line of interest used if activate_loi is True
 activate_loi = False
 loi = {'Na 1': [5895.9242, 5889.9487], 
        'Th 2': [3741.183, 4019.1286, 4086.5203, 4094.7469, 4116.7133, 4250.3419, 4381.4009, 4381.8595, 5989.045],
